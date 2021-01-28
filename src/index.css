@@ -3,18 +3,76 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Book.ttf)
+      format("truetype");
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Book-Italic.ttf)
+      format("truetype");
+    font-style: italic;
+    font-weight: 400;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Medium.ttf)
+      format("truetype");
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Medium-Italic.ttf)
+      format("truetype");
+    font-style: italic;
+    font-weight: 500;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Bold.ttf)
+      format("truetype");
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Bold-Italic.ttf)
+      format("truetype");
+    font-style: italic;
+    font-weight: 700;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Black.ttf)
+      format("truetype");
+    font-weight: 800;
+  }
+  @font-face {
+    font-family: "Circular Std";
+    src: url(https://conflux-static.oss-cn-beijing.aliyuncs.com/fonts/Circular-Std-Black-Italic.ttf)
+      format("truetype");
+    font-style: italic;
+    font-weight: 800;
+  }
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-
