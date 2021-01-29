@@ -8,7 +8,7 @@ const data = [
 function LanguageSelect({ onChange }) {
   return (
     <Select
-      className="w-30.5 h-7 text-white border border-white px-4 hover:border-blue-300  rounded-full"
+      className="w-30.5 h-7 text-white border border-white rounded-full"
       options={data}
     />
   );

@@ -24,7 +24,7 @@ function Select({
   return (
     <div className="relative text-xs font-body" ref={ref}>
       <div
-        className={`flex justify-between items-center ${className}`}
+        className={`w-35 h-7 flex justify-between items-center px-4 rounded ${className}`}
         onClick={() => setShow(!show)}
       >
         <input
