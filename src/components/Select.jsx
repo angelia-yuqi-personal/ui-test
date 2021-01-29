@@ -7,7 +7,6 @@ function Select({
   onChange,
   className,
   optionClassName,
-  
   icon,
 }) {
   const ref = useRef(null);
