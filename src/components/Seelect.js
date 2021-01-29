@@ -8,7 +8,6 @@ function Select({
   className,
   optionClassName,
   icon,
-  
 }) {
   const ref = useRef(null);
   const [value, setValue] = useState("");
