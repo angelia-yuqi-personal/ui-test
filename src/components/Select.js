@@ -8,6 +8,7 @@ function Select({
   className,
   optionClassName,
   icon,
+  
 }) {
   const ref = useRef(null);
   const [value, setValue] = useState("");
@@ -54,5 +55,6 @@ function Select({
     </div>
   );
 }
+
 
 export default Select;
