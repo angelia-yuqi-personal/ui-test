@@ -1,28 +1,41 @@
 import React, { useState, useRef } from "react";
 import { useClickAway } from "react-use";
-import img from '../images/select.svg'
+import img from "../images/select.svg";
+
+const Option = ({ children, className, value, onSelect, ...props }) => {
+  return (
+    <li
+      className={`h-5 hover:bg-indigo-200 pl-2 flex items-center cursor-pointer ${className}`}
+      onClick={(e, index) => onSelect && onSelect(e, value, children, index)}
+      {...props}
+    >
+      {children}
+    </li>
+  );
+};
 
 function Select({
   options = [],
   onChange,
   className,
-  optionClassName,
+  children,
   icon,
+  ...props
 }) {
   const ref = useRef(null);
   const [value, setValue] = useState("");
   const [show, setShow] = useState(true);
-  const onSelect = (e, item, index) => {
+  const onSelect = (e, value, text, index) => {
     e.stopPropagation();
     setShow(false);
-    setValue(item.text);
-    onChange && onChange(item.value);
+    setValue(text);
+    onChange && onChange(value);
   };
   useClickAway(ref, () => {
     setShow(false);
   });
   return (
-    <div className="relative text-xs font-body" ref={ref}>
+    <div className="relative text-xs font-body" ref={ref} {...props}>
       <div
         className={`w-35 h-7 flex justify-between items-center px-4 rounded ${className}`}
         onClick={() => setShow(!show)}
@@ -39,15 +52,12 @@ function Select({
       {show && (
         <div className="absolute bg-white shadow rounded mt-1 py-1 w-full">
           <ul>
-            {options.map((item, index) => (
-              <li
-                className={`h-5 hover:bg-indigo-200 pl-2 flex items-center cursor-pointer ${optionClassName}`}
-                key={index}
-                onClick={(e) => onSelect(e, item, index)}
-              >
-                {item.text}
-              </li>
-            ))}
+            {React.Children.map(children, (child, index) => {
+              return React.cloneElement(child, {
+                onSelect,
+                key: index,
+              });
+            })}
           </ul>
         </div>
       )}
@@ -55,6 +65,6 @@ function Select({
   );
 }
 
+Select.Option = Option;
 
 export default Select;
-
