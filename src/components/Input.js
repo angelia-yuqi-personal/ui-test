@@ -1,4 +1,4 @@
-function Input({ value, className, onChange, errorMessage = "", width }) {
+function Input({ value, className, onChange, errorMessage = "", ...props }) {
   return (
     <div>
       <input
@@ -9,6 +9,7 @@ function Input({ value, className, onChange, errorMessage = "", width }) {
             ? "border-error focus:border-error"
             : "focus:border-brand-blue"
         } ${className}`}
+        {... props}
       />
       {errorMessage && <div className="text-xs text-error mt-1">{errorMessage}</div>}
     </div>

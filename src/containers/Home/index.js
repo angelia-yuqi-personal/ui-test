@@ -26,7 +26,7 @@ function Home() {
         Sign up
       </Tag>
       <div className="bg-brand-blue-4 w-full h-20 pt-2 px-2">
-        <Input errorMessage="aaaaa" />
+        <Input errorMessage="aaaaa" placeholder="please enter" />
       </div>
       <a
         className="App-link"
