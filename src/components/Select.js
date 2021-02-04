@@ -35,7 +35,7 @@ function Select({
     setShow(false);
   });
   return (
-    <div className="relative text-xs font-body" ref={ref} {...props}>
+    <div className="relative text-xs" ref={ref} {...props}>
       <div
         className={`w-35 h-7 flex justify-between items-center px-4 rounded ${className}`}
         onClick={() => setShow(!show)}

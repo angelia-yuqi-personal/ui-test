@@ -66,6 +66,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  @apply font-body
 }
 
 #root {

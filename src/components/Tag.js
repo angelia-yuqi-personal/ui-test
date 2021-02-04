@@ -17,7 +17,7 @@ function Tag({
   return (
     <button
       onClick={(e) => onClick && onClick(e)}
-      className={`text-sm font-body flex justify-center items-center px-3 h-8 rounded focus:outline-none ${
+      className={`text-sm flex justify-center items-center px-3 h-8 rounded focus:outline-none ${
         variant === "solid"
           ? "bg-brand-blue-10 border-0"
           : "bg-white border-brand-blue-60 border"
