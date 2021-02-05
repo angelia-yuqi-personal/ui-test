@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { useClickAway } from "react-use";
 import img from "../images/select.svg";
 
@@ -34,6 +34,7 @@ function Select({
   useClickAway(ref, () => {
     setShow(false);
   });
+  useEffect(() => setShow(false), []);
   return (
     <div className="relative text-xs" ref={ref} {...props}>
       <div
@@ -41,7 +42,7 @@ function Select({
         onClick={() => setShow(!show)}
       >
         <input
-          className="border-none outline-none bg-transparent w-11/12 cursor-pointer"
+          className="border-none outline-none bg-transparent w-11/12 cursor-pointer placeholder-gray-10"
           value={value}
           type="text"
           placeholder="请选择"
