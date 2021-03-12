@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useClickAway } from "react-use";
 import img from "../images/select.svg";
 
-const Option = ({ children, className, value, onSelect, ...props }) => {
+const Option = ({ children, className = "", value, onSelect, ...props }) => {
   return (
     <li
       className={`h-5 hover:bg-indigo-200 pl-2 flex items-center cursor-pointer ${className}`}
@@ -17,9 +17,10 @@ const Option = ({ children, className, value, onSelect, ...props }) => {
 function Select({
   options = [],
   onChange,
-  className,
+  className = "",
   children,
   icon,
+  width = 35,
   ...props
 }) {
   const ref = useRef(null);
@@ -38,7 +39,7 @@ function Select({
   return (
     <div className="relative text-xs" ref={ref} {...props}>
       <div
-        className={`w-35 h-7 flex justify-between items-center px-4 rounded ${className}`}
+        className={`w-${width} h-7 flex justify-between items-center px-4 rounded-sm text-white border border-white ${className}`}
         onClick={() => setShow(!show)}
       >
         <input

@@ -4,21 +4,27 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontSize: {
-      '2xs': ['.625rem', '.875rem'],
-      'xs': ['.75rem', '1rem'],
-      'sm': ['.875rem', '1.125rem'],
-      'base': ['1rem', '1.375rem'],
-      'lg': ['1.25rem', '1.75rem'],
-      'xl': ['1.75rem', '2.25rem'],
+      "2xs": [".625rem", ".875rem"],
+      xs: [".75rem", "1rem"],
+      sm: [".875rem", "1.125rem"],
+      base: ["1rem", "1.375rem"],
+      lg: ["1.25rem", "1.75rem"],
+      xl: ["1.75rem", "2.25rem"],
     },
     extend: {
       spacing: {
         13: "3.25rem",
+        30: "7.5rem",
         30.5: "7.625rem",
+        35: "8.75rem",
+        70: "17.5rem",
         83: "20.75rem",
         95: "23.75rem",
         122: "30.5rem",
         160: "40rem",
+      },
+      boxShadow: {
+        common: "0px 6px 16px rgba(0, 0, 0, 0.08);",
       },
       colors: {
         "brand-blue": "#4c65e9",
@@ -26,17 +32,17 @@ module.exports = {
         "brand-blue-60": "#94a3f2",
         "brand-blue-10": "#dbe0fb",
         "brand-blue-4": "#f8f9fe",
-        'link': '#4c65e9',
-        'error': '#e15c56',
-        'success': '#44d7b6',
-        'warning': '#ffca4f',
+        link: "#4c65e9",
+        error: "#e15c56",
+        success: "#44d7b6",
+        warning: "#ffca4f",
         gray: {
-          80: '#333',
-          60: '#666',
-          40: '#999',
-          20: '#ccc',
-          10: '#eee'
-        }
+          80: "#333",
+          60: "#666",
+          40: "#999",
+          20: "#ccc",
+          10: "#eee",
+        },
       },
       fontFamily: {
         body: [
