@@ -20,9 +20,9 @@ function Toast({
   if (!open) return null;
   return (
     <div className="fixed w-full h-full top-0 left-0 flex justify-center z-10">
-      <div className="max-w-sm">
+      <div className="w-95">
         <div
-          className={`flex relative items-center justify-center rounded-sm p-3 bg-brand-blue-4 mt-${top} ${className}`}
+          className={`flex relative items-start justify-start rounded-sm p-3 w-full bg-brand-blue-4 mt-${top} ${className}`}
           {...props}
         >
           {icon && <img src={icon} alt="status" className="mr-2 w-4 h-4" />}
