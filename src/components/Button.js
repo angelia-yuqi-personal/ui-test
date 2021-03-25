@@ -26,7 +26,9 @@ function Button({
             ? 'hover:border-brand-blue-80 hover:text-brand-blue-80'
             : 'hover:border-brand-blue-80 hover:bg-brand-blue-80'
         }`
-      } ${width ? width : 'px-4'} ${size === 'medium' ? 'h-8' : 'h-10'} ${className}`}
+      } ${width ? width : 'px-4'} ${
+        size === 'medium' ? 'h-8' : 'h-10'
+      } ${className}`}
       {...props}
     >
       {children}

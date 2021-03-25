@@ -32,7 +32,11 @@ function Notification({
             alt="close"
           />
         )}
-        {title && <div className="text-base text-gray-80 mb-0.5 font-medium">{title}</div>}
+        {title && (
+          <div className="text-base text-gray-80 mb-0.5 font-medium">
+            {title}
+          </div>
+        )}
         <div className="text-sm text-gray-40">{content}</div>
         {actions && <div>{actions}</div>}
       </div>

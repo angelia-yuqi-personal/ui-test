@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from "react";
-import { useClickAway } from "react-use";
-import img from "../images/select.svg";
+import React, {useState, useRef, useEffect} from 'react'
+import {useClickAway} from 'react-use'
+import img from '../images/select.svg'
 
-const Option = ({ children, className = "", value, onSelect, ...props }) => {
+const Option = ({children, className = '', value, onSelect, ...props}) => {
   return (
     <li
       className={`h-5 hover:bg-indigo-200 pl-2 flex items-center cursor-pointer ${className}`}
@@ -11,31 +11,31 @@ const Option = ({ children, className = "", value, onSelect, ...props }) => {
     >
       {children}
     </li>
-  );
-};
+  )
+}
 
 function Select({
   options = [],
   onChange,
-  className = "",
+  className = '',
   children,
   icon,
   width = 35,
   ...props
 }) {
-  const ref = useRef(null);
-  const [value, setValue] = useState("");
-  const [show, setShow] = useState(true);
+  const ref = useRef(null)
+  const [value, setValue] = useState('')
+  const [show, setShow] = useState(true)
   const onSelect = (e, value, text, index) => {
-    e.stopPropagation();
-    setShow(false);
-    setValue(text);
-    onChange && onChange(value);
-  };
+    e.stopPropagation()
+    setShow(false)
+    setValue(text)
+    onChange && onChange(value)
+  }
   useClickAway(ref, () => {
-    setShow(false);
-  });
-  useEffect(() => setShow(false), []);
+    setShow(false)
+  })
+  useEffect(() => setShow(false), [])
   return (
     <div className="relative text-xs" ref={ref} {...props}>
       <div
@@ -58,15 +58,15 @@ function Select({
               return React.cloneElement(child, {
                 onSelect,
                 key: index,
-              });
+              })
             })}
           </ul>
         </div>
       )}
     </div>
-  );
+  )
 }
 
-Select.Option = Option;
+Select.Option = Option
 
-export default Select;
+export default Select
