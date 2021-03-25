@@ -52,7 +52,7 @@ function Select({
         <img className="w-3 h-3" src={icon || img} alt="icon" />
       </div>
       {show && (
-        <div className="absolute bg-white shadow rounded mt-1 py-1 w-full">
+        <div className="absolute bg-white shadow rounded-sm mt-1 py-1 w-full">
           <ul>
             {React.Children.map(children, (child, index) => {
               return React.cloneElement(child, {

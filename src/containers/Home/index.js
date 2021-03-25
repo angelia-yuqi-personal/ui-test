@@ -26,7 +26,7 @@ function Home() {
       <Button onClick={(e) => setOpen(true)} color="secondary" size="medium">
         Open
       </Button>
-      <Button disabled width="70">
+      <Button disabled width="w-70">
         Disabled
       </Button>
       <Tag closable className="my-1">
@@ -78,7 +78,7 @@ function Home() {
         onClose={() => setOpen(false)}
         content="Get incoming transactions Third party APIs are used to show your incoming transactions in the history. Turn off if you don’t want us to pull data from those services."
         actions={
-          <Button className="mt-2" width={48} onClick={() => setOpen(false)}>
+          <Button className="mt-2" width='w-48' onClick={() => setOpen(false)}>
             Get
           </Button>
         }

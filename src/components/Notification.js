@@ -1,7 +1,7 @@
-import close from "../images/gray-close.svg";
+import close from '../images/gray-close.svg'
 
 function Notification({
-  className = "",
+  className = '',
   open,
   closable = true,
   closeIcon,
@@ -11,13 +11,13 @@ function Notification({
   actions,
   ...props
 }) {
-  const onCloseClick = (e) => {
-    e.stopPropagation();
+  const onCloseClick = e => {
+    e.stopPropagation()
     if (closable) {
-      onClose && onClose(e);
+      onClose && onClose(e)
     }
-  };
-  if (!open) return null;
+  }
+  if (!open) return null
   return (
     <div className="fixed w-full h-full top-0 left-0 bg-black bg-opacity-60 transation flex justify-center items-center z-10">
       <div
@@ -28,16 +28,16 @@ function Notification({
           <img
             src={closeIcon || close}
             className="absolute w-4 h-4 top-2 right-2"
-            onClick={(e) => onCloseClick(e)}
+            onClick={e => onCloseClick(e)}
             alt="close"
           />
         )}
-        {title && <div className="text-base text-black mb-0.5">{title}</div>}
+        {title && <div className="text-base text-gray-80 mb-0.5 font-medium">{title}</div>}
         <div className="text-sm text-gray-40">{content}</div>
         {actions && <div>{actions}</div>}
       </div>
     </div>
-  );
+  )
 }
 
-export default Notification;
+export default Notification

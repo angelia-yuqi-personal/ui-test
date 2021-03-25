@@ -42,6 +42,14 @@
       "last 1 safari version"
     ]
   },
+  "prettier": {
+    "semi": false,
+    "bracketSpacing": false,
+    "proseWrap": "never",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid"
+  },
   "devDependencies": {
     "simple-zustand-devtools": "^1.0.0"
   }
