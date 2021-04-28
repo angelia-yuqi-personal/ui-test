@@ -77,3 +77,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.light {
+  --color-white: #fff;
+  --color-black: #000;
+}
+
+.dark {
+  --color-white: #000;
+  --color-black: #fff;
+}

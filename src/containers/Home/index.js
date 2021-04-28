@@ -11,9 +11,15 @@ import Input from "../../components/Input";
 import Notification from "../../components/Notification";
 import Toast from "../../components/Toast";
 import Alert from "../../components/Alert";
+import useTheme from '../../useTheme'
 
 function Home() {
   const [open, setOpen] = useState(false);
+  const [theme, setTheme] = useTheme()
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    setTheme(newTheme)
+  }
   return (
     <div className="w-95 h-160">
       <div className="w-full h-13 bg-brand-blue py-2.5 pl-3 pr-4 flex justify-between items-center">
@@ -72,6 +78,7 @@ function Home() {
       >
         Learn React
       </a>
+      <Button onClick={() => toggleTheme()}>Toggle</Button>
       <Notification
         open={false}
         title="Tips"

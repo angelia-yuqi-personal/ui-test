@@ -36,6 +36,8 @@ module.exports = {
         error: "#e15c56",
         success: "#44d7b6",
         warning: "#ffca4f",
+        white: "var(--color-white)",
+        black: "var(--color-black)",
         gray: {
           80: "#333",
           60: "#666",
